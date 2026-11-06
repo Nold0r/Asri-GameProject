@@ -1,0 +1,45 @@
+{
+  "engine": "agent skill (design docs), no engine",
+  "env": [
+    "Python 3.13 (no third-party packages; Pillow only for the screenshot)",
+    "no agent run: the checks cover the skill's rules as code on our own fixtures"
+  ],
+  "runs": [
+    {
+      "name": "rules as code",
+      "cwd": "examples",
+      "cmd": [
+        "python3",
+        "tests/run_rules.py"
+      ]
+    }
+  ],
+  "screenshot": {
+    "name": "screenshot",
+    "cwd": "examples",
+    "file": "screenshot.png",
+    "cmd": [
+      "python3",
+      "tests/card.py",
+      "narrative design: beat and choice rules",
+      "../screenshot.png",
+      "--",
+      "python3",
+      "tests/run_rules.py"
+    ]
+  },
+  "triggers": {
+    "positive": [
+      "Write branching dialogue for the tavern scene where the player picks a side",
+      "Design the lore architecture for this world so exploration is rewarded but not required",
+      "Map the character arcs and environmental storytelling beats to the GDD"
+    ],
+    "negative": [
+      "Build the dialogue runtime with typewriter text and save states",
+      "Write the GDD combat loop and enemy stats"
+    ]
+  },
+  "review": {
+    "singleResponsibility": "One job: produce the narrative design document — beats, choices, flags, lore tiers — and hand runtime implementation to dialogue-systems, genre presentation to visual-novel, and system rules to game-design-gdd."
+  }
+}

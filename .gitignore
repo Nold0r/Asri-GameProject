@@ -1,0 +1,42 @@
+# OS / tools
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.tmp
+*.bak
+
+# Claude local/private
+**/.claude/settings.local.json
+**/CLAUDE.local.md
+
+# Obsidian session-specific layout & caches
+**/.obsidian/workspace.json
+**/.obsidian/workspaces.json
+**/.obsidian/cache/
+**/.obsidian/plugins/*/data.json
+
+# Unity generated (within UnityProject/Game)
+**/Library/
+**/Temp/
+**/Obj/
+**/Build/
+**/Builds/
+**/Logs/
+**/UserSettings/
+**/.vs/
+**/.gradle/
+*.csproj
+*.sln
+*.slnx
+*.unityproj
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.unitypackage
+
+# Do NOT ignore Unity *.meta / ProjectSettings / Packages / Assets!

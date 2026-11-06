@@ -1,0 +1,222 @@
+{
+  "slug": "narrative-design",
+  "skill": "narrative-design",
+  "upstream": "poorvith-mp/skills-gamedev@d661d370a67c4532034e3d1d87c4aec237077f34",
+  "upstreamSha": "d661d370a67c4532034e3d1d87c4aec237077f34",
+  "date": "2026-10-30",
+  "engine": "agent skill (design docs), no engine",
+  "env": [
+    "Node v22.23.4",
+    "Python 3.13 (no third-party packages; Pillow only for the screenshot)",
+    "no agent run: the checks cover the skill's rules as code on our own fixtures"
+  ],
+  "trigger": "static",
+  "passed": 38,
+  "total": 38,
+  "commands": [
+    "(cd examples && python3 tests/run_rules.py)",
+    "(cd examples && python3 tests/card.py narrative design: beat and choice rules ../screenshot.png -- python3 tests/run_rules.py)"
+  ],
+  "checks": [
+    {
+      "criterion": "trigger",
+      "name": "SKILL.md description says when to use it",
+      "pass": true,
+      "detail": "Design branching dialogue, lore architecture and environmental storytelling aligned to the GDD. Use when writing branchi"
+    },
+    {
+      "criterion": "trigger",
+      "name": "triggers on: \"Write branching dialogue for the tavern scene where the player picks a side\"",
+      "pass": true,
+      "detail": "rank 2/117, overlap 2"
+    },
+    {
+      "criterion": "trigger",
+      "name": "triggers on: \"Design the lore architecture for this world so exploration is rewarded but not required\"",
+      "pass": true,
+      "detail": "rank 1/117, overlap 3"
+    },
+    {
+      "criterion": "trigger",
+      "name": "triggers on: \"Map the character arcs and environmental storytelling beats to the GDD\"",
+      "pass": true,
+      "detail": "rank 1/117, overlap 5"
+    },
+    {
+      "criterion": "trigger",
+      "name": "does not trigger on: \"Build the dialogue runtime with typewriter text and save states\"",
+      "pass": true,
+      "detail": "rank 9/117, overlap 1"
+    },
+    {
+      "criterion": "trigger",
+      "name": "does not trigger on: \"Write the GDD combat loop and enemy stats\"",
+      "pass": true,
+      "detail": "rank 7/117, overlap 1"
+    },
+    {
+      "criterion": "runs",
+      "name": "rules as code: required_sections_present",
+      "pass": true
+    },
+    {
+      "criterion": "runs",
+      "name": "rules as code: missing_section_detected",
+      "pass": true
+    },
+    {
+      "criterion": "runs",
+      "name": "rules as code: beat_fields_complete",
+      "pass": true
+    },
+    {
+      "criterion": "runs",
+      "name": "rules as code: choice_fields_complete",
+      "pass": true
+    },
+    {
+      "criterion": "runs",
+      "name": "rules as code: choices_differ_in_kind_good",
+      "pass": true
+    },
+    {
+      "criterion": "runs",
+      "name": "rules as code: choices_same_kind_rejected",
+      "pass": true
+    },
+    {
+      "criterion": "runs",
+      "name": "rules as code: lore_optional_good",
+      "pass": true
+    },
+    {
+      "criterion": "runs",
+      "name": "rules as code: lore_required_on_critical_path_rejected",
+      "pass": true
+    },
+    {
+      "criterion": "runs",
+      "name": "rules as code: every_beat_has_gameplay_consequence",
+      "pass": true
+    },
+    {
+      "criterion": "runs",
+      "name": "rules as code: as_you_know_rejected",
+      "pass": true
+    },
+    {
+      "criterion": "runs",
+      "name": "rules as code: real_person_test_good",
+      "pass": true
+    },
+    {
+      "criterion": "runs",
+      "name": "rules as code: every_choice_leads_somewhere_good",
+      "pass": true
+    },
+    {
+      "criterion": "runs",
+      "name": "rules as code: choice_leads_nowhere_rejected",
+      "pass": true
+    },
+    {
+      "criterion": "runs",
+      "name": "rules as code: flag_read_is_set_good",
+      "pass": true
+    },
+    {
+      "criterion": "runs",
+      "name": "rules as code: flag_read_never_set_rejected",
+      "pass": true
+    },
+    {
+      "criterion": "runs",
+      "name": "rules as code: consequence_within_window_good",
+      "pass": true
+    },
+    {
+      "criterion": "runs",
+      "name": "rules as code: consequence_outside_window_rejected",
+      "pass": true
+    },
+    {
+      "criterion": "runs",
+      "name": "rules as code: route_branching_dialogue",
+      "pass": true
+    },
+    {
+      "criterion": "runs",
+      "name": "rules as code: route_novel_to_book_writing",
+      "pass": true
+    },
+    {
+      "criterion": "runs",
+      "name": "rules as code: route_combat_to_game_design",
+      "pass": true
+    },
+    {
+      "criterion": "runs",
+      "name": "rules as code: output_path_format",
+      "pass": true
+    },
+    {
+      "criterion": "runs",
+      "name": "rules as code: good_doc_validates",
+      "pass": true
+    },
+    {
+      "criterion": "runs",
+      "name": "rules as code: bad_same_kind_invalid",
+      "pass": true
+    },
+    {
+      "criterion": "runs",
+      "name": "rules as code: bad_flag_invalid",
+      "pass": true
+    },
+    {
+      "criterion": "runs",
+      "name": "rules as code: bad_lore_invalid",
+      "pass": true
+    },
+    {
+      "criterion": "runs",
+      "name": "rules as code: bad_as_you_know_invalid",
+      "pass": true
+    },
+    {
+      "criterion": "runs",
+      "name": "rules as code: exits 0 with no script errors",
+      "pass": true,
+      "detail": "exit 0"
+    },
+    {
+      "criterion": "output",
+      "name": "screenshot screenshot.png rendered",
+      "pass": true
+    },
+    {
+      "criterion": "output",
+      "name": "self-check list has at least 3 items",
+      "pass": true,
+      "detail": "5 items"
+    },
+    {
+      "criterion": "single",
+      "name": "one job per skill (reviewed)",
+      "pass": true,
+      "detail": "One job: produce the narrative design document — beats, choices, flags, lore tiers — and hand runtime implementation to dialogue-systems, genre presentation to visual-novel, and system rules to game-design-gdd."
+    },
+    {
+      "criterion": "bilingual",
+      "name": "English SKILL.md from upstream",
+      "pass": true
+    },
+    {
+      "criterion": "bilingual",
+      "name": "Chinese guide written",
+      "pass": true,
+      "detail": "1314 chars"
+    }
+  ]
+}

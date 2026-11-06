@@ -1,0 +1,17 @@
+{
+  "game": "Lantern Moth",
+  "sections": ["characters", "beats", "choices", "lore"],
+  "characters": [{"id": "moth", "personality": "curious"}],
+  "beats": [
+    {"id": "b1", "summary": "Moth finds a dim lantern", "gameplay_consequence": "unlock_glow",
+     "on_critical_path": true, "requires_lore": "tier2"},
+    {"id": "b2", "summary": "Beetle blocks the path", "gameplay_consequence": "open_gate",
+     "on_critical_path": true}
+  ],
+  "choices": [
+    {"id": "c1", "from_beat": "b1", "to_beat": "b2", "kind": "share_light",
+     "choice_scene": 1, "consequence_scene": 2}
+  ],
+  "lore": [{"id": "l2", "tier": "tier2", "text": "Moths once lit the old road."}],
+  "lines": [{"id": "d1", "text": "Hello there.", "line_ok": true}]
+}

@@ -1,0 +1,9 @@
+{
+  "newFileLocation": "root",
+  "attachmentFolderPath": "Медиа/Вложения",
+  "alwaysUpdateLinks": true,
+  "userIgnoreFilters": [
+    "**/CLAUDE.md",
+    "**/SKILL.md"
+  ]
+}
